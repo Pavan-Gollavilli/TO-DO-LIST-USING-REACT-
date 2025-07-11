@@ -1,40 +1,130 @@
-*{
+/* Reset some default styling */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.main-container{
+
+/* Main container with background gradient and center alignment */
+.main-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
-background: #43cea2;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #185a9d, #43cea2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
-
-}
-.container{
-    width: 100%;
-    background-color: #fff;
+    min-height: 100vh;
+    background: linear-gradient(to right, #185a9d, #43cea2);
     padding: 20px;
+}
+
+/* Card-like container for the form and content */
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 35px;
-
 }
-.heading{
+
+/* Heading style */
+.heading {
     text-align: center;
     font-size: 2rem;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
-.new-task{
-    margin: 0 auto;
+
+/* Labels for form fields */
+label {
     display: block;
-    font-size: 1.2rem;
-    color: black;
-    font-weight: bold;    
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input fields and textarea */
+input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #43cea2;
+    outline: none;
+}
+
+/* Textarea resizing control */
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Add Task button */
+button,
+.add-task-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+.add-task-button:hover {
+    background-color: #0056b3;
+}
+
+/* Task filter radio buttons */
+.task-filter {
+    margin-top: 20px;
+}
+
+.task-filter label {
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    margin-top: 30px;
+    font-size: 0.85rem;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Responsive improvements */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .heading {
+        font-size: 1.6rem;
+    }
+
+    input,
+    textarea,
+    button {
+        font-size: 0.95rem;
+    }
 }
