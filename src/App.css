@@ -92,13 +92,33 @@ button:hover,
 }
 
 /* Task filter radio buttons */
+/* Filter section layout fix */
 .task-filter {
+    display: flex;
+    align-items: center;
+    gap: 20px;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
-.task-filter label {
-    margin-right: 15px;
-    font-weight: normal;
+.task-filter .filter-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.task-filter .status-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Optional: Improve spacing around radio buttons */
+.task-filter input[type="radio"] {
+    accent-color: #007bff;
+    transform: scale(1.2);
+    cursor: pointer;
 }
 
 /* Footer */
